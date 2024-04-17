@@ -41,11 +41,14 @@ int main(){
     {
         double e=rand() % 10 + 1;
         auto pairsWithinDistance=findPairsWithinDistance(setA,setB,e);
+        cout<<"The randomly generated epsilon value is:"<<e<<endl;
         cout<<"Pairs within distance epsilon "<<e<<" :"<<endl;
         for(auto& j:pairsWithinDistance)
         {
             cout<< "("<<j.first.first<<", "<<j.first.second<<")<-->("<<j.second.first<<", "<<j.second.second<<")"<<endl;
+            cout<<"Distance between the pairs is:"<<euclideanDist(j.first, j.second)<<endl;
         }
+        
         cout<<endl;
     }
 }
